@@ -1,0 +1,16 @@
+<mat-card *ngIf="user" class="card">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <img [src]="user.picture.thumbnail" />
+    </div>
+    <mat-card-title>{{user.name.title}} {{user.name.first}} {{user.name.last}}</mat-card-title>
+    <mat-card-subtitle>{{user.gender}}</mat-card-subtitle>
+    <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+  </mat-card-header>
+  <picture mat-card-image>
+    <app-map [position]="user.location.coordinates"></app-map>
+  </picture>
+  <mat-card-content>
+    <app-weather *ngIf="weather" [weather]="weather"></app-weather>
+  </mat-card-content>
+</mat-card>

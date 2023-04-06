@@ -11,7 +11,7 @@ export class UsersService {
   private weatherService: WeatherProvider;
 
   constructor(private httpService: HttpService) {
-    this.weatherService = new WeatherProvider(this.httpService);
+    this.weatherService = new WeatherProvider(this.httpService as any);
   }
 
   getRandomUsers(count = 1): Observable<UserWithWeather[]> {

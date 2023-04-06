@@ -5,7 +5,7 @@ import { Username } from './username.type';
 export interface User {
   gender: 'male' | 'female';
   name: Username;
-  image: UserImage;
+  picture: UserImage;
   location: UserLocation;
   email: string;
 }

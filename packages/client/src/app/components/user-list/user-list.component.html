@@ -1,0 +1,7 @@
+<ng-container *ngIf="users; else loading">
+  <app-user-card *ngFor="let user of users" [item]="user"></app-user-card>
+</ng-container>
+
+<ng-template #loading>
+  <mat-spinner class="spinner"></mat-spinner>
+</ng-template>

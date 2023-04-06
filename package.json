@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx lerna exec --scope=@user_weather_tracker/api -- npm run start:prod",
-    "dev": "npx lerna exec --scope=@user_weather_tracker/{api,types,weather_provider} --parallel -- npm run start:dev",
+    "dev": "npx lerna exec --scope=@user_weather_tracker/{api,types,weather_provider,client} --parallel -- npm run start:dev",
     "test": "npx lerna exec --scope=@user_weather_tracker/api -- npm run test",
     "build": "npx lerna exec --scope=@user_weather_tracker/api -- npm run build",
     "lint": "npx lerna exec --scope=@user_weather_tracker/api -- npm run lint",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/1van0v/user_weather_tracker#readme",
   "devDependencies": {
+    "@nrwl/angular": "^15.9.2",
     "@nrwl/nest": "^15.9.2",
     "@nrwl/workspace": "^15.9.2",
     "husky": "^8.0.3",

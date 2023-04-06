@@ -1,8 +1,7 @@
-export interface CurrentWeather {
+export interface CurrentWeatherDto {
   time: string;
   temperature: number;
-  description: string;
-  picture: string;
+  weathercode: number;
   windspeed: number;
   winddirection: number;
 }

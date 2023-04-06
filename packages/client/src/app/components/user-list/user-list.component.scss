@@ -1,0 +1,9 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  min-height: 80vh;
+}
+
+.spinner {
+  place-self: center;
+}
