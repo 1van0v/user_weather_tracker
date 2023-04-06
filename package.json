@@ -7,7 +7,7 @@
     "start": "npx lerna exec --scope=@user_weather_tracker/api -- npm run start:prod",
     "dev": "npx lerna exec --scope=@user_weather_tracker/{api,types,weather_provider,client} --parallel -- npm run start:dev",
     "test": "npx lerna exec --scope=@user_weather_tracker/api -- npm run test",
-    "build": "npx lerna exec --scope=@user_weather_tracker/api -- npm run build",
+    "build": "npx lerna exec --concurrency 1 --stream --scope=@user_weather_tracker/{types,weather_provider,api,client} -- npm run build",
     "lint": "npx lerna exec --scope=@user_weather_tracker/api -- npm run lint",
     "pre-commit": "lerna run --concurrency 1 --stream pre-commit --since HEAD --exclude-dependents",
     "prepare": "husky install"
