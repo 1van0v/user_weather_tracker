@@ -1,0 +1,22 @@
+<div class="current-weather" *ngIf="currentWeather">
+  <div>
+    <div class="current">{{ currentWeather.temperature }}</div>
+    <div class="min-max">
+      <div>
+        <div class="min-max__label">min</div>
+        <div>{{ min }}</div>
+      </div>
+      <div>
+        <div class="min-max__label">max</div>
+        <div>{{ max }}</div>
+      </div>
+    </div>
+  </div>
+  <img [src]="currentWeather.picture" />
+  <div>{{ currentWeather.description }}</div>
+</div>
+
+<app-weather-history
+  *ngIf="weatherHistory"
+  [history]="weatherHistory"
+></app-weather-history>

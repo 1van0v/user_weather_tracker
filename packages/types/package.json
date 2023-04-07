@@ -1,0 +1,33 @@
+{
+  "name": "@user_weather_tracker/types",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "Sashka <ivanov5oleksandr@gmail.com>",
+  "homepage": "https://github.com/1van0v/user_weather_tracker/tree/main/packages/types#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1van0v/user_weather_tracker.git"
+  },
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly",
+    "start:dev": "npm run build -- --watch",
+    "pre-commit": "lint-staged"
+  },
+  "bugs": {
+    "url": "https://github.com/1van0v/user_weather_tracker/issues"
+  },
+  "lint-staged": {
+    "lib/**/!(*_pb).ts": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  }
+}

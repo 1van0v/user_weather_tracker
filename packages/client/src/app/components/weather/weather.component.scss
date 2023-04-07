@@ -1,0 +1,27 @@
+.current-weather {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.current {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.min-max {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+  text-align: center;
+
+  &__label {
+    line-height: 1;
+    min-width: 3rem;
+    color: #9d9d9d;
+    font-size: 11px;
+
+  }
+}

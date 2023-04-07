@@ -1,0 +1,36 @@
+{
+  "name": "@user_weather_tracker/root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx lerna exec --scope=@user_weather_tracker/api -- npm run start:prod",
+    "dev": "npx lerna exec --scope=@user_weather_tracker/{api,types,weather_provider,client} --parallel -- npm run start:dev",
+    "test": "npx lerna exec --scope=@user_weather_tracker/api -- npm run test",
+    "build": "npx lerna exec --concurrency 1 --stream --scope=@user_weather_tracker/{types,weather_provider,api,client} -- npm run build",
+    "lint": "npx lerna exec --scope=@user_weather_tracker/api -- npm run lint",
+    "pre-commit": "lerna run --concurrency 1 --stream pre-commit --since HEAD --exclude-dependents",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1van0v/user_weather_tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1van0v/user_weather_tracker/issues"
+  },
+  "homepage": "https://github.com/1van0v/user_weather_tracker#readme",
+  "devDependencies": {
+    "@nrwl/angular": "^15.9.2",
+    "@nrwl/nest": "^15.9.2",
+    "@nrwl/workspace": "^15.9.2",
+    "husky": "^8.0.3",
+    "lerna": "^6.6.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
