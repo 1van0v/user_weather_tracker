@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UserWithWeather } from '@user_weather_tracker/types';
+import { User, UserWithWeather } from '@user_weather_tracker/types';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,6 +9,10 @@ import { Observable } from 'rxjs';
 export class UsersService {
   private baseUrl = '/users/';
   constructor(private readonly http: HttpClient) {}
+
+  saveUser(user: User): Observable<User> {
+    return this.http.post<User>(this.baseUrl + 'saved', user);
+  }
 
   getSavedUsers(): Observable<UserWithWeather[]> {
     return this.getUsers('saved');

@@ -1,4 +1,4 @@
-<ng-container *ngIf="currentWeather">
+<div class="current-weather" *ngIf="currentWeather">
   <div>
     <div class="current">{{ currentWeather.temperature }}</div>
     <div class="min-max">
@@ -14,4 +14,9 @@
   </div>
   <img [src]="currentWeather.picture" />
   <div>{{ currentWeather.description }}</div>
-</ng-container>
+</div>
+
+<app-weather-history
+  *ngIf="weatherHistory"
+  [history]="weatherHistory"
+></app-weather-history>

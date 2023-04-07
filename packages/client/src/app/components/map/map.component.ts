@@ -21,7 +21,7 @@ export class MapComponent {
         tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: '...',
         }),
-        marker(latLng([latitude, longitude])),
+        marker(latLng([latitude, longitude]), { draggable: false }),
       ],
       center,
     };
